@@ -1,0 +1,507 @@
+/* Media query for landscape orientation */
+@media only screen and (orientation: landscape) and (max-width: 768px) {
+  /* Adjust navbar font size */
+  .navbar {
+      font-size: small; /* Smaller font size for landscape */
+  }
+
+  /* Adjust section padding */
+  section {
+      padding-top: 20px; /* Less padding for landscape */
+      padding-bottom: 30px; /* Less bottom padding */
+  }
+
+  /* Adjust heading sizes */
+  #introduction h1 {
+      font-size: 2rem; /* Smaller heading size */
+  }
+
+  #about .about-card {
+      width: calc(50% - 1rem); /* Two cards per row */
+  }
+
+  /* Adjust product cards */
+  .card {
+      width: 100%; /* Full width for cards */
+  }
+
+  /* Adjust customer logos */
+  .customer-logos {
+      grid-template-columns: repeat(2, 1fr); /* Two logos per row */
+  }
+
+  /* Adjust service cards */
+  .service-card {
+      width: calc(50% - 1rem); /* Two cards per row */
+  }
+}
+
+/* INTRODUCTION */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Bold 'Shubham Uniforms' in the header */
+.navbar-brand span {
+  font-weight: 600; 
+  
+}
+
+/* Section background colors */
+#introduction {
+  background-color: #f0f0f0;
+}
+#about {
+  background-color: #d6d5d5;
+}
+#products {
+  background-color: #f0f0f0;
+}
+#customers {
+  background-color: #ffffff;
+}
+#services {
+  background-color: #f0f0f0;
+}
+#contact {
+  background-color: #eaeaea;
+}
+
+footer {
+  padding-top: 20px;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  transition: all 0.3s ease-in-out;
+  font-size: x-small;
+  align-items: flex-start;
+}
+
+/* Shrinking effect */
+.navbar.scrolled {
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #222; /* Optional: Slightly darker background on scroll */
+}
+
+.navbar-brand img {
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+  align-content: flex-start;
+}
+
+.navbar.scrolled .navbar-brand img {
+  width: 50px; /* Shrink logo width */
+  height: 65px; /* Shrink logo height */
+}
+
+/* Navbar link color */
+.navbar .nav-link {
+  color: #fff; /* Default white color */
+}
+
+/* Change color on hover */
+.navbar .nav-link:hover {
+  color: #b6aa97; /* Example color on hover (orange) */
+}
+
+/* Add color for active links (optional) */
+.navbar .nav-link.active {
+  color: #b6aa97; /* Example active color (red) */
+}
+
+  section {
+      padding-top: 50px; 
+      padding-bottom: 50px;
+  }
+
+
+/* Introduction Section Styling */
+#introduction {
+  text-align: center;
+  padding: 50px 0;
+}
+
+#introduction h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#introduction p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Full-Width Image Styles */
+.full-width-image {
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out; 
+}
+
+/* Bulge effect on hover */
+.full-width-image:hover {
+  transform: scale(1.05); /* Slightly bulge the image when hovered */
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  #introduction h1 {
+      font-size: 1.25rem; /* Smaller font size for mobile devices */
+  }
+
+  #introduction p {
+      font-size: 0.9rem; /* Smaller font size for paragraph text */
+  }
+
+  section {
+      padding-top: 50px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* TOGGLER */
+
+.custom-toggler {
+  background-color: #626261; 
+  padding: 8px 12px; /* Spacing */
+  border-radius: 8px; /* Rounded corners */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Toggler Icon Color */
+.custom-toggler .navbar-toggler-icon {
+  filter: invert(1); /* Makes icon white */
+}
+
+/* Add Border to Toggler */
+.custom-toggler {
+  border: 1px solid #282726; /* Thicker border */
+}
+
+/* ABOUT */
+
+#about {
+  background: #e3e3e3;
+  padding: 2rem 0;
+  color: #333;
+}
+
+#about .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 50px;
+
+}
+
+.about-card {
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: calc(33.33% - 1rem); /* Adjusted width for three cards side by side */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-card h2 {
+  font-size: 1.5rem;
+  color: #004d6b;
+  margin-bottom: 1rem;
+}
+
+.about-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .about-card {
+    width: calc(50% - 1rem); /* Two cards per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-card {
+    width: 100%; /* Single card per row on mobile screens */
+  }
+}
+
+/* PRODUCTS */
+
+.card {
+  position: relative; /* Ensure absolute positioning works properly */
+  overflow: hidden; /* Prevent image spill when card scales up */
+  transition: transform 0.9s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Effect for Cards */
+.card:hover {
+  transform: scale(1.05); /* Slight bulge effect */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
+/* Ensure Card Images Scale Properly */
+.card img {
+  transition: transform 0.9s ease; /* Smooth transition */
+}
+
+.heading-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.heading-box h2 {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  color: #100b0b;
+  padding: 15px 30px;
+  margin: 20px auto;
+  background: linear-gradient(45deg, #89A8B2, #B3C8CF);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: gradient-move 5s infinite;
+}
+section {
+    scroll-margin-top: 100px; /* Matches approximate navbar height */
+}
+
+
+/* Gradient animation */
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* CUSTOMERS SECTION */
+
+#customers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#customers h5 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #89A8B2, #B3C8CF);
+  color: rgb(0, 0, 0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 25px;
+}
+
+/* Grid container for logos */
+.customer-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 10px;
+}
+
+/* Individual logo styling */
+.customer-logo {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #customers h5 {
+      font-size: 1.5rem;
+  }
+
+  .customer-logos {
+      gap: 20px;
+      grid-template-columns: repeat(3, 1fr); /* Three images per row */
+  }
+}
+
+@media (max-width: 576px) {
+  .customer-logo {
+      max-width: 200px;
+  }
+}
+
+/* OUR SERVICES */
+#services {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #f9f9f9;
+}
+
+#services h3 {
+  font-size: 2rem;
+  color: #191010;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, #89A8B2, #B3C8CF);
+  border-radius: 12px;
+  padding: 15px 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  animation: gradient-move 5s infinite;
+  margin-top: 25px;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: linear-gradient(145deg, #e4ebec, #c7d4d7);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: calc(100% - 2rem); /* Full width on mobile */
+  max-width: 300px;
+  flex: 1 1 auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h2 {
+  font-size: 1.5rem;
+  color: #100b0b;
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive Styles for Services Section */
+@media (max-width: 768px) {
+.about-card {
+  width: calc(50% - 1rem); /* Two cards per row on smaller screens */
+}
+}
+
+@media (max-width: 480px) {
+.about-card {
+  width: 100%; /* Single card per row on mobile screens */
+}
+}
+
+/* CONTACTS */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#contact h2 {
+  position: relative;
+  display: inline-block;
+  font-size: 1.75rem;
+  color: #191010;
+  padding: 15px 30px;
+  margin: 20px auto;
+  background: linear-gradient(45deg, #89A8B2, #B3C8CF);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: gradient-move 5s infinite;
+  text-align: center;
+  margin-top: 25px;
+}
+
+/* Optional: Gradient animation for a dynamic effect */
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Style for left-aligned text within the form and contact info */
+.card {
+  text-align: left;
+}
+
+.fs-field label {
+  font-weight: bold;
+  color: #333;
+}
+
+.fs-input, .fs-textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.fs-button-group {
+  text-align: center;
+}
+
+.fs-button {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #ffffff;
+}
+
+.fs-button:hover {
+  background-color: #5a636a;
+  border-color: #5a636a;
+}
+
+/* FOOTER */
+footer {
+  border-top: 2px solid #ccc; /* Line above footer */
+  text-align: center; /* Center align text */
+  padding: 20px;
+  background-color: #222;
+  color: #fff;
+}

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Uniforms</title>
+  
+    <!-- Favicon -->
+    <link rel="icon" href="logo.png" type="image/png">
+  
+    <!-- Add Montserrat font from Google Fonts -->
+    <link href="https://fonts.bunny.net/css?family=montserrat:400,500,600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+      
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+        <!-- Logo and Title -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="logo.png" alt="Shubham Uniforms Logo" width="70" height="90" class="d-inline-block me-2">
+            <span class="fs-4 fs-md-5 d-inline">Shubham Uniforms</span>
+        </a>
+
+      <!-- Toggler Button (Only Visible on Small Screens) -->
+      <button class="navbar-toggler custom-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+      <!-- Normal Navbar for Large Screens -->
+      <div class="navbar-nav d-none d-lg-flex">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link fs-5" href="#introduction">Introduction</a></li>
+            <li class="nav-item"><a class="nav-link fs-5" href="#products">Products</a></li>
+            <li class="nav-item"><a class="nav-link fs-5" href="#customers">Our Customers</a></li>
+            <li class="nav-item"><a class="nav-link fs-5" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link fs-5" href="#contact">Contact Us</a></li>
+        </ul>
+    </div>
+    
+  </div>
+</nav>
+
+
+<!-- Offcanvas Sidebar (Only for Small Screens) -->
+<div class="offcanvas offcanvas-end bg-dark text-white d-lg-none" id="offcanvasNavbar">
+  <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+      <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link fs-5 close-menu" href="#introduction" data-bs-dismiss="offcanvas">Introduction</a></li>
+          <li class="nav-item"><a class="nav-link fs-5 close-menu" href="#products" data-bs-dismiss="offcanvas">Products</a></li>
+          <li class="nav-item"><a class="nav-link fs-5 close-menu" href="#customers" data-bs-dismiss="offcanvas">Our Customers</a></li>
+          <li class="nav-item"><a class="nav-link fs-5 close-menu" href="#services" data-bs-dismiss="offcanvas">Services</a></li>
+          <li class="nav-item"><a class="nav-link fs-5 close-menu" href="#contact" data-bs-dismiss="offcanvas">Contact Us</a></li>
+      </ul>
+  </div>
+</div>
+
+<!-- JavaScript for Smooth Scrolling on Smaller Screens -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".close-menu").forEach(function (element) {
+          element.addEventListener("click", function (event) {
+              let targetId = this.getAttribute("href"); // Get section ID
+              let targetElement = document.querySelector(targetId);
+              if (targetElement) {
+                  event.preventDefault(); // Prevent default link behavior
+                  let navbarHeight = document.querySelector(".navbar").offsetHeight;
+                  let targetPosition = targetElement.offsetTop - navbarHeight;
+                  window.scrollTo({
+                      top: targetPosition,
+                      behavior: "smooth"
+                  });
+
+                  let offcanvasElement = document.querySelector("#offcanvasNavbar");
+                  let offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+                  if (offcanvas) {
+                      offcanvas.hide();
+                  }
+              }
+          });
+      });
+  });
+</script>
+
+  <!-- Introduction Section -->
+    <section id="introduction" class="text-center py-5">
+      <div class="container">
+        <h1>Welcome to Shubham Uniforms</h1>
+        <p>Your one-stop solution for premium uniforms and apparel.</p>
+        <img src="img.png" alt="Shubham Uniforms" class="img-fluid mt-4 full-width-image" />
+      </div>
+    </section>  
+    <!-- Required Scripts for Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+    
+    
+<script>
+  // Shrink navbar on scroll
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  // Close navbar dropdown when a link is clicked (for mobile view)
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
+    link.addEventListener('click', function() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      // Close the navbar if it's open
+      if (navbarCollapse.classList.contains('show')) {
+        navbarToggler.click();
+      }
+    });
+  });
+</script>
+
+</body>
+  
+  <section id="about">
+    <div class="container">
+      <div class="about-card">
+        <h2>About Us</h2>
+        <p>Shubham Uniforms, founded and led by Ishwar Shimpi, is a dedicated provider of high-quality uniforms tailored to meet the diverse needs of various industries. With a commitment to affordability and excellence, we pride ourselves on delivering uniforms that combine durability, comfort, and style.</p>
+      </div>
+  
+      <div class="about-card">
+        <h2>Our Vision</h2>
+        <p>To become the leading uniform supplier recognized for our reliability, customer-centric approach, and innovative solutions in the uniform supply industry.</p>
+      </div>
+  
+      <div class="about-card">
+        <h2>Our Mission</h2>
+        <p>To supply top-tier uniforms at the most competitive prices, ensuring that our clients receive exceptional value without any compromise on quality.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+
+<section id="products" class="heading-box">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Products</h2>
+    <div class="row g-4">
+      
+      <!-- First Product Card -->
+      <div class="col-md-6 col-sm-12">
+        <div class="card h-100 text-center">
+          <a href="1.png" target="_blank">
+            <img src="1.png" class="card-img-top" alt="Product 1">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">FORMAL WEAR UNIFORM</h5>
+            <p class="card-text font-weight-bold">(CORPORATE WEAR)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Product Card -->
+      <div class="col-md-6 col-sm-12">
+        <div class="card h-100 text-center">
+          <a href="2.png" target="_blank">
+            <img src="2.png" class="card-img-top" alt="Product 2">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">CASUAL WEAR UNIFORM</h5>
+            <p class="card-text font-weight-bold">(OFFICE CASUALS)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Third Product Card -->
+      <div class="col-md-6 col-sm-12">
+        <div class="card h-100 text-center">
+          <a href="3.png" target="_blank">
+            <img src="3.png" class="card-img-top" alt="Product 3">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">T-SHIRTS</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fourth Product Card -->
+      <div class="col-md-6 col-sm-12">
+        <div class="card h-100 text-center">
+          <a href="4.png" target="_blank">
+            <img src="4.png" class="card-img-top" alt="Product 4">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">BOILER SUIT AND WORKER SUIT</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Remaining Products -->
+      <div class="col-md-6 col-sm-12">
+        <div class="card h-100 text-center">
+          <a href="5 (1).png" target="_blank">
+            <img src="5 (1).png" class="card-img-top" alt="Product 5">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">NURSE OUTFITS</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <div class="card h-100 text-center">
+          <a href="5 (2).png" target="_blank">
+            <img src="5 (2).png" class="card-img-top" alt="Product 6">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">LAB COATS AND APRONS</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <div class="card h-100 text-center">
+          <a href="5 (3).png" target="_blank">
+            <img src="5 (3).png" class="card-img-top" alt="Product 7">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">HOSPITALITY</h5>
+            <p class="card-text font-weight-bold">(HOTELS AND RESTAURANTS)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <div class="card h-100 text-center">
+          <a href="5 (4).png" target="_blank">
+            <img src="5 (4).png" class="card-img-top" alt="Product 8">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">CHEF COAT</h5>
+            <p class="card-text font-weight-bold">(HOTELS AND RESTAURANTS)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <div class="card h-100 text-center">
+          <a href="5 (5).png" target="_blank">
+            <img src="5 (5).png" class="card-img-top" alt="Product 9">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">SECURITY GUARD UNIFORMS</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <div class="card h-100 text-center">
+          <a href="5 (6).png" target="_blank">
+            <img src="5 (6).png" class="card-img-top" alt="Product 10">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">HOUSE KEEPING</h5>
+            <p class="card-text font-weight-bold">(MEDICAL AND RESTAURANTS)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <div class="card h-100 text-center">
+          <a href="5 (7).png" target="_blank">
+            <img src="5 (7).png" class="card-img-top" alt="Product 11">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">PRE-PRIMARY AND PRIMARY SCHOOL UNIFORMS</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <div class="card h-100 text-center">
+          <a href="5 (8).png" target="_blank">
+            <img src="5 (8).png" class="card-img-top" alt="Product 12">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">COLLEGE AND SECONDARY SCHOOL UNIFORMS</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12">
+        <div class="card h-100 text-center">
+          <a href="5 (9).png" target="_blank">
+            <img src="5 (9).png" class="card-img-top" alt="Product 13">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">SAREES AND KURTIS</h5>
+            <p class="card-text font-weight-bold">(TEACHERS, RECEPTIONISTS, etc...)</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Our Customers Section -->
+
+<section id="customers">
+    <h5>Our Customers</h5>
+    <div class="customer-logos">
+        <img src="cust (13).png" alt="Customer 1" class="customer-logo">
+        <img src="cust (12).png" alt="Customer 2" class="customer-logo">
+        <img src="cust (11).png" alt="Customer 3" class="customer-logo">
+        <img src="cust (10).png" alt="Customer 4" class="customer-logo">
+        <img src="cust (9).png" alt="Customer 5" class="customer-logo">
+        <img src="cust (8).png" alt="Customer 6" class="customer-logo">
+        <img src="cust (7).png" alt="Customer 7" class="customer-logo">
+        <img src="cust (6).png" alt="Customer 8" class="customer-logo">
+        <img src="cust (5).png" alt="Customer 9" class="customer-logo">
+        <img src="cust (4).png" alt="Customer 10" class="customer-logo">
+        <img src="cust (3).png" alt="Customer 11" class="customer-logo">
+        <img src="cust (2).png" alt="Customer 12" class="customer-logo">
+        <img src="cust (1).png" alt="Customer 13" class="customer-logo">
+    </div>
+</section>
+
+<section id="services">
+  <h3>Our Services</h3>
+  <div class="services-container">
+    <div class="service-card">
+      <h2>Quality</h2>
+      <p>Our uniforms are made from premium fabrics that are durable and easy to maintain.</p>
+    </div>
+    <div class="service-card">
+      <h2>Customization</h2>
+      <p>Tailored solutions to fit the specific needs and branding of your organization.</p>
+    </div>
+    <div class="service-card">
+      <h2>Cost-Effective</h2>
+      <p>We offer competitive pricing without sacrificing the quality of our uniforms.</p>
+    </div>
+    <div class="service-card">
+      <h2>Timely Deliveries</h2>
+      <p>Streamlined processes to ensure that your uniforms are delivered on schedule with full satisfaction.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5" style="color: #000000;">Contact Us</h2>
+    <div class="row align-items-center">
+      <!-- Left Column with Map and Contact Info -->
+      <div class="col-lg-6 mb-4">
+        <div class="card shadow p-4 border-0" style="background-color: #ffffff;">
+          <h4 class="mb-3" style="color: #000000;">Get in touch with us</h4>
+          <p><strong>Email:</strong> <a href="mailto:shubhamuniforms@gmail.com" class="text-dark">shubhamuniforms@gmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+918805633001" class="text-dark">+91 8805633001</a></p>
+          <p><strong>Address:</strong> Pratibha Complex, Near Shubham Collection, Khopoli, Maharashtra-410203</p>
+          <!-- Google Maps -->
+          <div class="mt-4 rounded overflow-hidden">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.247016423378!2d73.34225737504455!3d18.787141882358874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be8076a52062ef9%3A0xdff7d41ba2d89881!2sShubham%20Collection!5e0!3m2!1sen!2sin!4v1733818566273!5m2!1sen!2sin" 
+              width="100%" 
+              height="300" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column with Contact Form -->
+      <div class="col-lg-6">
+        <div class="card shadow p-4 border-0" style="background-color: #ffffff;">
+          <h4 class="mb-4" style="color: #000000;">Send us a message</h4>
+          <form action="https://formspree.io/f/xyzzzydk" class="fs-form" target="_top" method="POST">
+            <div class="fs-field">
+              <label class="fs-label" for="name">Name</label>
+              <input class="fs-input form-control border-secondary" id="name" name="name" placeholder="Enter your name" required />
+            </div>
+            <div class="fs-field mt-3">
+              <label class="fs-label" for="email">Email Address</label>
+              <input class="fs-input form-control border-secondary" id="email" name="email" placeholder="Enter your email" required />
+            </div>
+            <div class="fs-field mt-3">
+              <label class="fs-label" for="number">Phone Number</label>
+              <input class="fs-input form-control border-secondary" id="number" name="number" placeholder="Enter your phone number" required />
+            </div>
+            <div class="fs-field mt-3">
+              <label class="fs-label" for="company">Company Name</label>
+              <input class="fs-input form-control border-secondary" id="company" name="company" placeholder="Enter your company name" required />
+            </div>
+            <div class="fs-field mt-3">
+              <label class="fs-label" for="message">Inquiry Message</label>
+              <textarea class="fs-textarea form-control border-secondary" id="message" name="message" placeholder="Write your message here" rows="4" required></textarea>
+            </div>
+            <div class="fs-button-group mt-4 text-center">
+              <button class="fs-button btn btn-secondary btn-lg w-100" type="submit" style="background-color: #6c757d; border-color: #6c757d; color: #ffffff;">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Shubham Collection. All rights reserved.</p>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

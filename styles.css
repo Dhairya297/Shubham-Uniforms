@@ -195,6 +195,29 @@ html {
   animation: fadeUp 1s ease 1.6s forwards;
 }
 
+/* Book your order button */
+.hero-btn {
+  display: inline-block;
+  margin-top: clamp(12px, 2.5vw, 28px);
+  padding: clamp(7px, 1.2vw, 14px) clamp(18px, 3vw, 40px);
+  font-size: clamp(0.8rem, 1.6vw, 1.15rem);
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
+  background: linear-gradient(45deg, #89A8B2, #B3C8CF);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  animation: fadeUp 1s ease 2.2s forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-btn:hover {
+  color: #000;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+}
+
 /* Keyframes */
 @keyframes heroZoom {
   from { transform: scale(1.12); }
@@ -222,7 +245,8 @@ html {
   .hero-shade,
   .hero-text h1,
   .hero-line,
-  .hero-text p {
+  .hero-text p,
+  .hero-btn {
     animation: none;
     opacity: 1;
     transform: none;
@@ -425,14 +449,13 @@ section {
   width: auto;
   height: auto;
   object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.8;
-  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+.logo-card img {
+  transition: transform 0.3s ease;
 }
 
 .logo-card:hover img {
-  filter: grayscale(0%);
-  opacity: 1;
+  transform: scale(1.08);
 }
 
 /* Responsive */

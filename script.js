@@ -16,4 +16,23 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   });
-  
+
+document.addEventListener('DOMContentLoaded', function () {
+  const container = document.getElementById('customerLogos');
+  if (!container) return;
+
+  const totalCustomers = 36; // change this when you add more logos
+
+  for (let i = 1; i <= totalCustomers; i++) {
+    const card = document.createElement('div');
+    card.className = 'logo-card';
+
+    const img = document.createElement('img');
+    img.src = `customers (${i}).png`;
+    img.alt = `Customer ${i}`;
+    img.loading = 'lazy';
+
+    card.appendChild(img);
+    container.appendChild(card);
+  }
+});
